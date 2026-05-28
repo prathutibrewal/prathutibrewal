@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="FleetLedger"/>
+<title>FleetLedger</title>
+<meta name="theme-color" content="#0e0f11"/>
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIkZsZWV0TGVkZ2VyIiwgInNob3J0X25hbWUiOiAiRmxlZXRMZWRnZXIiLCAiZGVzY3JpcHRpb24iOiAiVHJhbnNwb3J0IGJ1c2luZXNzIGxlZGdlciIsICJzdGFydF91cmwiOiAiLiIsICJzY29wZSI6ICIuIiwgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsICJvcmllbnRhdGlvbiI6ICJwb3J0cmFpdCIsICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMwZTBmMTEiLCAidGhlbWVfY29sb3IiOiAiIzBlMGYxMSIsICJpY29ucyI6IFt7InNyYyI6ICJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQU1BQUFBREFDQUlBQUFEZHZ2dFFBQUFEdDBsRVFWUjRuTzNkUDA1VVVSakdZVWRGWXlJUTZFanNMTFYxQlJiVzdzQ1d6dFlWMk5nWlErMHlYSWtiTUtIRFdCb0xMU2FaRUJNRjVqMS92anM4VHc5emNzNlA3MTR1QTZ3T0RvL3V3TGJ1emw0QXl5WWdJZ0lpSWlBaUFpSWlJQ0lDSWlJZ0lnSWlJaUFpQWlJaUlDSUNJaUlnSWdJaUlpQWlBaUlpSUNJQ0lpSWdJZ0lpSWlBaTkyY3Y0RnJPejQ1bkwyR09rOU9MMlV1NHdxcnM3NFhkMm1qK3BXWk01UUxTelpWS2xWUW9JT25jU0pHTVNnUWtuYTFOejJoeVFOSnBZbUpHMHdLU1RuTlRNcHJ6SEVnOVBVeloxUWtCcWFlZjhYczc5QkltbldHR1hjN0dUU0QxakRSc3R3Y0ZwSjd4eHV6NWlJRFVNOHVBbmU4ZWtIcm02cjMvM3M1QnBHOUF4azhGWFUraFkwRHFxYVBmV2ZRS1NEM1ZkRG9SOTBCRXVnUmsvTlRVNDF4TUlDTHRBekorS210K09pWVFrY1lCR1QvMXRUMGpFNGhJeTRDTW42Vm9lRkltRUJFQkVXa1drT3ZYc3JRNkx4T0lpSUNJQ0loSW00RGNBQzFSazFNemdZZ0lpSWlBaUFpSWlJQ0lDSWlJZ0lnSWlJaUFpQWlJaUlDSUNJaUlnSWdJaUlpQWlBaUl5REwrNGR6R3oxKy9uNzc5M3ZVbDloK3R2bjc0MzkvT3Z1WWF2cnc3ZlBia1hydDFGV1VDRVJFUUVRRVJFUkFSQVJFUkVCRUJFUkVRa1lVOVNMeW1XL0lRcndJVGlJaUFpQWlJaUlDSUNJaUlnSWdJaUlpQWlPem1nOFJYNzM5czk0RXZuKzk5UHQxdnU1amRaZ0lSRVJBUkFSRVJFQkVCRVJFUUVRRVJFUkNSM1h5UTZCMkp3NWhBUkFSRVJFQkVCRVJFUUVRRVJFUkFSQVJFUkVCRUJFUmtOMytVVWNIVzc4dGVlLzNpd2NjM2oxc3RwaDhUaUlpQWlBaUlpSUNJQ0lpSWdJZ0lpSWlBaUN6c1FlTER2ZFczVDhmV1VJY0pSRVJBUkFSRVJFQkVCRVJFUUVRRVJFUkFSQVJFUkVCRUJFUkVRRVFFUkVSQVJBUkVSRUJFQkVSRVFFVGFCSFJ5ZXRIazh6QlNrMU16Z1lnSWlJaUFpRFFMeUczUXNyUTZMeE9JaUlDSXRBeklWV3dwR3A2VUNVU2tjVUNHVUgxdHo4Z0VJdEkrSUVPb3N1YW5Zd0lSNlJLUUlWUlRqM014Z1lqMENzZ1FxcWJUaVhTY1FCcXFvOTlaOUwyRWFhaUNycWZnSG9oSTk0QU1vYmw2Ny8rSUNhU2hXUWJzL0tCTG1JYkdHN1BuNCs2Qk5EVFNzTjFlSFJ3ZWpYbWxqZk16ZithOW84RmZxQk8rQ3pPSytobS90M08ramRkUUQxTjJkY0lsN0RLWHN5WW1ma0ZPRG1oTlJsdWJQc3RMQkxRbW94dVpuczVhb1lEV1pIU2xJdW1zbFF0b1EwbC9LZFhOUnQyQUxydTFNZFdNNXJKbEJFUlozczVCUkVCRUJFUkVRRVFFUkVSQVJBUkVSRUJFQkVSRVFFUUVSRVJBUkFSRVJFQkVCRVJFUUVRRVJFUkFSQVJFUkVCRUJFVGtENUM0cERsSVV2d2ZBQUFBQUVsRlRrU3VRbUNDIiwgInNpemVzIjogIjE5MngxOTIiLCAidHlwZSI6ICJpbWFnZS9wbmciLCAicHVycG9zZSI6ICJhbnkgbWFza2FibGUifSwgeyJzcmMiOiAiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFnQUFBQUlBQ0FJQUFBQjdHa090QUFBTE5rbEVRVlI0bk8zY1BZNWN4eFdBMGFaQnlUQ2dQeW9qb014d3F0d3IwRklFUVlrMjRjeXBvVWdyOEFxMEJtZEt2QUVEeXVqWWNtQUhFaWhxT0p6cDd1bnU5K3ArNXl5QUxMQ3E3c2Q2US9EWlJ4Ky9PQURRODd1dEZ3REFOZ1FBSUVvQUFLSUVBQ0JLQUFDaUJBQWdTZ0FBb2dRQUlFb0FBS0lFQUNCS0FBQ2lCQUFnU2dBQW9nUUFJRW9BQUtJRUFDQktBQUNpQkFBZ1NnQUFvZ1FBSUVvQUFLSUVBQ0JLQUFDaUJBQWdTZ0FBb2dRQUlFb0FBS0lFQUNCS0FBQ2lCQUFnU2dBQW9nUUFJRW9BQUtJRUFDQktBQUNpQkFBZ1NnQUFvZ1FBSUVvQUFLSUVBQ0JLQUFDaUJBQWdTZ0FBb2dRQUlFb0FBS0lFQUNCS0FBQ2lCQUFnU2dBQW9nUUFJRW9BQUtJRUFDQktBQUNpQkFBZ1NnQUFvZ1FBSUVvQUFLSUVBQ0JLQUFDaUJBQWc2dm5XQytCaWZ2ejIwNjJYUU1YTHIxNXR2UVF1NE5sSEg3L1llZzJjekt4bmgxUmhPUUt3QmhPZjVlakIvZ25BZmhuNmpDRUcreVFBdTJQdU01Z1M3SW9BN0lLaFQ1QVliRTRBTm1iMEV5Y0RHeEtBYlpqN2NJY1MzSjRBM0pyUkR3K1FnVnNTZ05zeCt1RklNbkFiQW5CMTVqNmNUUW11U2dDdXlPaUhpNUNCSy9HZndWMkw2UStYNGpaZGlSZkE1VG1zY0NXZUFwY2xBSmRrOU1NTnlNQ2xDTUJsR1Axd1l6THdkSDRHY0FHbVA5eWVlL2QwWGdCUDRnakM1andGenVZRmNEN1RIL2JBVFR5YkFKekptWVA5Y0IvUDR4UFF5UncxMkMyZmcwN2lCWEFhMHgvMnpBMDlpUUNjd05tQy9YTlBqK2NUMEZFY0tWaU96MEdQOGdKNG5Pa1BLM0p6SHlVQWozQ0dZRjN1NzhNRTRDRk9ENnpPTFg2QUFMeVRjd016dU12dklnRDNjMkpnRWpmNlhnSndEMmNGNW5HdjN5WUFkemtsTUpYYmZZY0EvSWJ6QWJPNTQyOFNnRjg1R1ZEZ3ByOG1BTDl3SnFERGZmK1pBQndPVGdQMHVQVUhBVGc0QjFEbDd0Y0Q0QVJBV1h3Q3BBTVEzM3ZnMEo0RDZRQUFsSFVEVU00KzhLYnNOSWdHSUx2ZndMMmFNNkVZZ09aT0F3OExUb1ppQUFBNEJBTVFqRHh3cE5wOGFBV2d0cnZBcVZKVEloU0ExTDRDWit2TWlsQUFBSGhUSlFDZHBBTlBGNWtZaVFCRTloSzRvTUxjU0FRQWdMZk5EMEFoNDhBMWpKOGU4d01Bd0wyR0IyQjh3SUdybWoxRGhnY0FnSGVaSElEWjZRWnVZL0FrR1J1QXdYc0czTmpVZVRJMkFBQThiR1lBcHVZYTJNcklxVEl6QUFBOFNnQUFvZ1lHWU9STERkamN2Tmt5TUFBQUhHTmFBT1lsR3RpUFlSTm1XZ0FBT05Lb0FBeUxNN0JEaytiTXFBQUFjRHdCQUlpYUU0Qko3ekpnejhaTW16a0JBT0FrUXdJd0pzakFFbWJNbkNFQkFPQlVBZ0FRSlFBQVVSTUNNT05qSExDV0FaTm5RZ0FBT0lNQUFFUXRINEFCcnpCZ1VhdlBuK1VEQU1CNUJBQWdTZ0FBb3RZT3dPb2Y0SURWTFQyRjFnNEFBR2NUQUlBb0FRQ0lFZ0NBcUlVRHNQVFBYb0F4MXAxRkN3Y0FnS2NRQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnS2hWQTdEdXY3c0M1bGwwSXEwYUFBQ2VTQUFBb2dRQUlFb0FBS0lFQUNCS0FBQ2lCQUFnU2dBQW9nUUFJRW9BQUtJRUFDQktBQUNpQkFBZ1NnQUFvZ1FBSUVvQUFLSUVBQ0JLQUFDaUJBQWdTZ0FBb2dRQUlFb0FBS0lFQUNCS0FBQ2lCQUFnU2dBQW9nUUFJRW9BQUtJRUFDQktBQUNpQkFBZ1NnQUFvZ1FBSUVvQUFLSUVBQ0JLQUFDaUJBQWdTZ0FBb3A1dnZRQXU3ei8vL2Q4ZnYvbjMxcXZZaGI5LzgrR2YvL1RlTlg3bEcvd2hmL0g1Kzk5OStjRlZmd3ZpdkFBQW9nUUFJRW9BQUtJRUFDQktBQUNpQkFBZ1NnQUFvZ1FBSUVvQUFLSUVBQ0JLQUFDaUJBQWdTZ0FBb2dRQUlFb0FBS0lFQUNCS0FBQ2lCQUFnU2dBQW9nUUFJRW9BQUtJRUFDQktBQUNpbm0rOUFKYjB4ZWZ2Zi9mbEIxdXZBbmdTTHdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSWVyNzFBbGpTOXovODlOblhyN1pleGYwKy9NT3pmLzcxeGRhcmdBVjRBUUJFQ1FCQWxBQUFSQWtBUUpRQUFFUUpBRUNVQUFCRUNRQkFsQUFBUkFrQVFKUUFBRVFKQUVDVUFBQkVDUUJBbEFBQVJBa0FRSlFBQUVRSkFFQ1VBQUJFQ1FCQWxBQUFSQWtBUUpRQUFFUTkzM29CTE9tTHo5Ly83c3NQdGw0RjhDUmVBQUJSQWdBUUpRQUFVUUlBRUNVQUFGRUNBQkFsQUFCUkFnQVFKUUFBVVFJQUVDVUFBRkVDQUJBbEFBQlJBZ0FRSlFBQVVRSUFFQ1VBQUZFQ0FCQWxBQUJSQWdBUUpRQUFVUUlBRUNVQUFGRUNBQkFsQUFCUkFnQVFKUUFBVVFJQUVDVUFBRkhQdDE0QWNML3ZmL2pwczY5ZmJiMktZLzNqTDUrOC9NUmZLQmRqd3dDaUJBQWdTZ0FBb2dRQUlFb0FBS0lFQUNCS0FBQ2lCQUFnU2dBQW9nUUFJRW9BQUtJRUFDQktBQUNpQkFBZ1NnQUFvZ1FBSUVvQUFLSUVBQ0JLQUFDaUJBQWdTZ0FBb2dRQUlFb0FBS0tlYjcwQUx1LzM3ejM3MTk4KzNYb1Z3L2xEWmdBdkFJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpRm8xQUMrL2VyWDFFZ0Irc2VoRVdqVUFBRHlSQUFCRUNRQkFsQUFBUkFrQVFKUUFBRVF0SElCRi85MFZNTXk2czJqaEFBRHdGQUlBRUNVQUFGRUNBQkMxZGdEVy9ka0xNTVBTVTJqdEFBQndOZ0VBaUJJQWdLamxBN0QwQnpoZ2FhdlBuK1VEQU1CNUJBQWdha0lBVm4rRkFTc2FNSGttQkFDQU13Z0FRSlFBQUVRTkNjQ0FqM0hBUW1iTW5DRUJBT0JVY3dJd0k4akEvbzJaTm5NQ0FNQkpCQUFnYWxRQXhyekxnTjJhTkdkR0JRQ0E0MDBMd0tRNEEzc3piTUpNQ3dBQVJ4b1lnR0dKQm5aaTNtd1pHQUFBamlFQUFGRXpBekR2cFFac2ErUlVtUmtBQUI0MU5nQWpjdzFzWXVvOEdSdUF3OXc5QTI1cDhDU1pIQUFBSGpBOEFJUFREZHpBN0JreVBBQUF2TXY4QU13T09IQTk0NmZIL0FBQWNLOUVBTVpuSExpNHd0eElCT0RRMkV2Z1VpSVRveElBQU80SUJTQ1NkT0NKT3JNaUZJQkRhVitCODZTbVJDc0FoOWp1QWllcHpZZGNBQUQ0V1RFQXRjZ0R4d2hPaG1JQURzbWRCaDdRbkFuUkFCeXErdzI4TFRzTnVnRUFpRXNISUp0OTRMWHlIRWdINE5EZWV5QStBZW9CT09SUEFHUzUrd0p3T0RnSDBPUFdId1RnTmFjQk90ejNud25BcjV3SktIRFRYeE9BMzNBeVlEWjMvRTBDY0pmekFWTzUzWGNJd0QyY0Vwakh2WDZiQU56UFdZRkozT2g3Q2NBN09URXdnN3Y4TGdMd0VPY0dWdWNXUDBBQUh1SDB3THJjMzRjSndPT2NJVmlSbS91b1p4OTkvR0xyTlN6angyOC8zWG9Kd09PTS9pTjVBWnpBcVlMOWMwK1BKd0NuY2JaZ3o5elFrL2dFZENhZmcyQlhqUDR6ZUFHY3lXbUQvWEFmenlNQTUzUG1ZQS9jeExQNUJIUUJQZ2ZCSm96K0ovSUN1QUNuRUc3UHZYczZMNEJMOGhTQUd6RDZMMFVBTGs4RzRFcU0vc3NTZ0d1UkFiZ2dvLzhhL0F6Z1dweFh1QlMzNlVxOEFLN09Vd0RPWnZSZmxRRGNqaExBa2N6OTJ4Q0FXNU1CZUlEUmYwc0NzQTBaZ0R1TS90c1RnSTBwQVhIbS9vWUVZQmRrZ0NDamYzTUNzRHRpd0dDRy9xNEl3SDRwQVdPWSsvc2tBR3NRQTVaajZPK2ZBQ3hKRDlnaEUzODVBakNIS25Belp2ME1BZ0FRNVQrREE0Z1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaVBvLzFCZVN3b3kxdTg4QUFBQUFTVVZPUks1Q1lJST0iLCAic2l6ZXMiOiAiNTEyeDUxMiIsICJ0eXBlIjogImltYWdlL3BuZyIsICJwdXJwb3NlIjogImFueSBtYXNrYWJsZSJ9XX0="/>
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAADt0lEQVR4nO3dP05UURjGYUdFYyIQ6EjsLLV1BRbW7sCWztYV2NgZQ+0yXIkbMKHDWBoLLSaZEBMF5j1/vjs8Tw9zcs6P714uA6wODo/uwLbuzl4AyyYgIgIiIiAiAiIiICICIiIgIgIiIiAiAiIiICICIiIgIgIiIiAiAiIiICICIiIgIgIiIiAi92cv4FrOz45nL2GOk9OL2Uu4wqrs74Xd2mj+pWZM5QLSzZVKlVQoIOncSJGMSgQkna1Nz2hyQNJpYmJG0wKSTnNTMprzHEg9PUzZ1QkBqaef8Xs79BImnWGGXc7GTSD1jDRstwcFpJ7xxuz5iIDUM8uAne8ekHrm6r3/3s5BpG9Axk8FXU+hY0DqqaPfWfQKSD3VdDoR90BEugRk/NTU41xMICLtAzJ+Kmt+OiYQkcYBGT/1tT0jE4hIy4CMn6VoeFImEBEBEWkWkOvXsrQ6LxOIiICICIhIm4DcAC1Rk1MzgYgIiIiAiAiIiICICIiIgIgIiIiAiAiIiICICIiIgIgIiIiAiAiIyDL+4dzGz1+/n7793vUl9h+tvn7439/OvuYavrw7fPbkXrt1FWUCEREQEQERERARAREREBEBEREQkYU9SLymW/IQrwITiIiAiAiIiICICIiIgIgIiIiAiOzmg8RX739s94Evn+99Pt1vu5jdZgIRERARAREREBEBEREQEQERERCR3XyQ6B2Jw5hARAREREBEBEREQEQERERARAREREBEBERkN3+UUcHW78tee/3iwcc3j1stph8TiIiAiAiIiICICIiIgIgIiIiAiCzsQeLDvdW3T8fWUIcJRERARAREREBEBEREQEQERERARAREREBEBEREQEQERERARAREREBEBEREQETaBHRyetHk8zBSk1MzgYgIiIiAiDQLyG3QsrQ6LxOIiICItAzIVWwpGp6UCUSkcUCGUH1tz8gEItI+IEOosuanYwIR6RKQIVRTj3MxgYj0CsgQqqbTiXScQBqqo99Z9L2EaaiCrqfgHohI94AMobl67/+ICaShWQbs/KBLmIbGG7Pn4+6BNDTSsN1eHRwejXmljfMzf+a9o8FfqBO+CzOK+hm/t3O+jddQD1N2dcIl7DKXsyYmfkFODmhNRlubPstLBLQmoxuZns5aoYDWZHSlIumslQtoQ0l/KdXNRt2ALru1MdWM5rJlBERZ3s5BREBEBEREQEQERERARAREREBEBEREQEQERERARAREREBEBEREQEQERERARAREREBEBETkD5C4pDlIUvwfAAAAAElFTkSuQmCC"/>
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAADt0lEQVR4nO3dP05UURjGYUdFYyIQ6EjsLLV1BRbW7sCWztYV2NgZQ+0yXIkbMKHDWBoLLSaZEBMF5j1/vjs8Tw9zcs6P714uA6wODo/uwLbuzl4AyyYgIgIiIiAiAiIiICICIiIgIgIiIiAiAiIiICICIiIgIgIiIiAiAiIiICICIiIgIgIiIiAi92cv4FrOz45nL2GOk9OL2Uu4wqrs74Xd2mj+pWZM5QLSzZVKlVQoIOncSJGMSgQkna1Nz2hyQNJpYmJG0wKSTnNTMprzHEg9PUzZ1QkBqaef8Xs79BImnWGGXc7GTSD1jDRstwcFpJ7xxuz5iIDUM8uAne8ekHrm6r3/3s5BpG9Axk8FXU+hY0DqqaPfWfQKSD3VdDoR90BEugRk/NTU41xMICLtAzJ+Kmt+OiYQkcYBGT/1tT0jE4hIy4CMn6VoeFImEBEBEWkWkOvXsrQ6LxOIiICICIhIm4DcAC1Rk1MzgYgIiIiAiAiIiICICIiIgIgIiIiAiAiIiICICIiIgIgIiIiAiAiIyDL+4dzGz1+/n7793vUl9h+tvn7439/OvuYavrw7fPbkXrt1FWUCEREQEQERERARAREREBEBEREQkYU9SLymW/IQrwITiIiAiAiIiICICIiIgIgIiIiAiOzmg8RX739s94Evn+99Pt1vu5jdZgIRERARAREREBEBEREQEQERERCR3XyQ6B2Jw5hARAREREBEBEREQEQERERARAREREBEBERkN3+UUcHW78tee/3iwcc3j1stph8TiIiAiAiIiICICIiIgIgIiIiAiCzsQeLDvdW3T8fWUIcJRERARAREREBEBEREQEQERERARAREREBEBEREQEQERERARAREREBEBEREQETaBHRyetHk8zBSk1MzgYgIiIiAiDQLyG3QsrQ6LxOIiICItAzIVWwpGp6UCUSkcUCGUH1tz8gEItI+IEOosuanYwIR6RKQIVRTj3MxgYj0CsgQqqbTiXScQBqqo99Z9L2EaaiCrqfgHohI94AMobl67/+ICaShWQbs/KBLmIbGG7Pn4+6BNDTSsN1eHRwejXmljfMzf+a9o8FfqBO+CzOK+hm/t3O+jddQD1N2dcIl7DKXsyYmfkFODmhNRlubPstLBLQmoxuZns5aoYDWZHSlIumslQtoQ0l/KdXNRt2ALru1MdWM5rJlBERZ3s5BREBEBEREQEQERERARAREREBEBEREQEQERERARAREREBEBEREQEQERERARAREREBEBETkD5C4pDlIUvwfAAAAAElFTkSuQmCC"/>
+
+<!-- Firebase SDK -->
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0e0f11;--surface:#16181c;--card:#1e2026;--border:#2a2d35;
+  --accent:#f5a623;--g:#3ecf8e;--red:#e05c5c;--blue:#7eb3ff;
+  --text:#e8e9ec;--muted:#7a7f8e;--r:12px;
+}
+html,body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;min-height:100vh;overflow-x:hidden}
+::-webkit-scrollbar{width:3px;height:3px}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+
+/* ── SHELL ── */
+#app{display:flex;flex-direction:column;min-height:100vh;max-width:480px;margin:0 auto}
+.topbar{padding:env(safe-area-inset-top,16px) 18px 12px;padding-top:max(env(safe-area-inset-top),16px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);background:var(--bg);position:sticky;top:0;z-index:100}
+.topbar-title{font-size:19px;font-weight:800;letter-spacing:-.5px}
+.topbar-title span{color:var(--accent)}
+.topbar-sub{font-size:11px;color:var(--muted);font-family:'DM Mono',monospace;margin-top:2px}
+.sync-dot{width:8px;height:8px;border-radius:50%;background:var(--border);transition:background .3s}
+.sync-dot.live{background:var(--g);box-shadow:0 0 6px var(--g)}
+.sync-dot.error{background:var(--red)}
+
+/* ── NAV ── */
+.nav{display:flex;border-bottom:1px solid var(--border);background:var(--bg);position:sticky;top:61px;z-index:99;overflow-x:auto}
+.nav::-webkit-scrollbar{display:none}
+.nav-btn{flex:1;min-width:60px;padding:10px 4px;background:none;border:none;color:var(--muted);font-family:'Syne',sans-serif;font-size:10px;font-weight:600;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;text-transform:uppercase;letter-spacing:.3px;transition:color .2s}
+.nav-btn.active{color:var(--accent);border-bottom:2px solid var(--accent)}
+.nav-icon{font-size:17px;line-height:1}
+
+/* ── CONTENT ── */
+.content{flex:1;padding:16px;display:flex;flex-direction:column;gap:14px;padding-bottom:90px}
+.tab-pane{display:none}.tab-pane.active{display:flex;flex-direction:column;gap:14px}
+
+/* ── CARDS ── */
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px}
+.card-title{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+.card.editing{border-color:var(--accent)}
+
+/* ── STATS ── */
+.stat-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stat-3{grid-template-columns:1fr 1fr 1fr}
+.stat-box{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 10px}
+.stat-label{font-size:10px;color:var(--muted);font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.5px}
+.stat-val{font-size:19px;font-weight:800;margin-top:4px;letter-spacing:-1px;font-family:'DM Mono',monospace}
+.green{color:var(--g)}.amber{color:var(--accent)}.red{color:var(--red)}.blue{color:var(--blue)}.white{color:var(--text)}
+
+/* ── BARS ── */
+.bar-track{height:6px;background:var(--border);border-radius:99px;overflow:hidden;margin-top:6px}
+.bar-fill{height:100%;border-radius:99px;transition:width .5s cubic-bezier(.4,0,.2,1)}
+
+/* ── LIST ── */
+.list-item{display:flex;align-items:flex-start;gap:10px;padding:11px 0;border-bottom:1px solid var(--border);cursor:pointer;transition:background .15s}
+.list-item:last-child{border-bottom:none;padding-bottom:0}
+.list-item:active{background:rgba(255,255,255,.03)}
+.li-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;margin-top:1px}
+.li-body{flex:1;min-width:0}
+.li-title{font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.li-sub{font-size:11px;color:var(--muted);font-family:'DM Mono',monospace;margin-top:2px}
+.li-note{font-size:11px;color:var(--muted);margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.li-right{text-align:right;flex-shrink:0;display:flex;flex-direction:column;align-items:flex-end;gap:3px}
+.li-amount{font-size:15px;font-weight:700;font-family:'DM Mono',monospace}
+.li-meta{font-size:10px;color:var(--muted)}
+.edit-hint{font-size:10px;color:var(--accent);letter-spacing:.3px}
+
+/* ── BADGES ── */
+.badge{display:inline-block;padding:2px 8px;border-radius:99px;font-size:10px;font-weight:700;letter-spacing:.3px}
+.badge-green{background:rgba(62,207,142,.15);color:var(--g)}
+.badge-amber{background:rgba(245,166,35,.15);color:var(--accent)}
+.badge-red{background:rgba(224,92,92,.15);color:var(--red)}
+.badge-blue{background:rgba(126,179,255,.15);color:var(--blue)}
+.badge-grey{background:var(--border);color:var(--muted)}
+
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 18px;border-radius:10px;font-family:'Syne',sans-serif;font-size:14px;font-weight:700;cursor:pointer;border:none;transition:transform .1s,opacity .15s;-webkit-tap-highlight-color:transparent}
+.btn:active{transform:scale(.96)}
+.btn-primary{background:var(--accent);color:#111}
+.btn-green{background:var(--g);color:#111}
+.btn-ghost{background:var(--border);color:var(--text)}
+.btn-red{background:rgba(224,92,92,.15);color:var(--red);border:1px solid rgba(224,92,92,.3)}
+.btn-outline{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.btn-sm{padding:8px 14px;font-size:13px;border-radius:9px}
+.btn-xs{padding:5px 10px;font-size:11px;border-radius:7px}
+.btn-full{width:100%}
+
+/* ── FORMS ── */
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:13px}
+.form-label{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+.form-input,.form-select,.form-textarea{background:var(--surface);border:1px solid var(--border);border-radius:9px;color:var(--text);font-family:'Syne',sans-serif;font-size:14px;font-weight:500;padding:11px 13px;outline:none;width:100%;transition:border-color .2s;-webkit-appearance:none}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--accent)}
+.form-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a7f8e' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px}
+.form-select option{background:var(--card)}
+.form-textarea{resize:none;min-height:70px;line-height:1.5}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.checkbox-row{display:flex;align-items:center;gap:10px;margin-bottom:13px}
+.checkbox-row input[type=checkbox]{width:18px;height:18px;accent-color:var(--accent);cursor:pointer}
+.checkbox-row label{font-size:14px;font-weight:600;cursor:pointer}
+
+/* ── MODAL ── */
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:300;display:flex;align-items:flex-end;opacity:0;pointer-events:none;transition:opacity .25s}
+.modal-bg.open{opacity:1;pointer-events:all}
+.modal{background:var(--card);border-top:1px solid var(--border);border-radius:20px 20px 0 0;padding:16px 18px;padding-bottom:max(32px,env(safe-area-inset-bottom,32px));width:100%;max-height:93vh;overflow-y:auto;transform:translateY(100%);transition:transform .3s cubic-bezier(.32,0,.2,1)}
+.modal-bg.open .modal{transform:translateY(0)}
+.modal-handle{width:40px;height:4px;background:var(--border);border-radius:99px;margin:0 auto 16px}
+.modal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.modal-title{font-size:16px;font-weight:800}
+.modal-close{background:none;border:none;color:var(--muted);font-size:20px;cursor:pointer;padding:0 2px;line-height:1;-webkit-tap-highlight-color:transparent}
+
+/* ── INLINE EDIT ── */
+.inline-edit{background:var(--surface);border:1px solid var(--accent);border-radius:10px;padding:14px;margin-top:2px;margin-bottom:8px;animation:slideDown .2s ease}
+@keyframes slideDown{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.inline-edit-title{font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px}
+
+/* ── CONFIRM DELETE ── */
+.confirm-box{background:rgba(224,92,92,.1);border:1px solid rgba(224,92,92,.3);border-radius:10px;padding:12px;margin-bottom:12px}
+.confirm-msg{font-size:13px;color:var(--red);margin-bottom:10px;font-weight:600}
+
+/* ── FILTERS ── */
+.month-row,.filter-row{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch}
+.month-row::-webkit-scrollbar,.filter-row::-webkit-scrollbar{display:none}
+.chip{flex-shrink:0;padding:5px 12px;border-radius:99px;font-size:11px;font-weight:700;background:var(--surface);border:1px solid var(--border);color:var(--muted);cursor:pointer;font-family:'DM Mono',monospace;-webkit-tap-highlight-color:transparent;transition:background .15s,color .15s}
+.chip.active{background:var(--accent);color:#111;border-color:var(--accent)}
+.chip.sm{font-size:10px;padding:4px 10px}
+
+/* ── SECTION HEADER ── */
+.sec-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.sec-hdr-title{font-size:13px;font-weight:700}
+
+/* ── TABLE ── */
+.sum-table{width:100%;border-collapse:collapse}
+.sum-table td{padding:7px 0;font-size:13px;border-bottom:1px solid var(--border)}
+.sum-table tr:last-child td{border-bottom:none}
+.sum-table .key{color:var(--muted);font-size:12px}
+.sum-table .val{text-align:right;font-weight:600;font-family:'DM Mono',monospace}
+
+/* ── TRUCK CARD ── */
+.truck-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:10px;transition:border-color .2s}
+.truck-card.editing{border-color:var(--accent)}
+.truck-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:10px}
+.ts-box{background:var(--card);border-radius:8px;padding:8px;text-align:center}
+.ts-val{font-size:13px;font-weight:700;font-family:'DM Mono',monospace}
+.ts-lab{font-size:9px;color:var(--muted);text-transform:uppercase;margin-top:2px}
+
+/* ── LOAN ── */
+.loan-track{height:8px;background:var(--border);border-radius:99px;margin-top:8px;overflow:hidden}
+.loan-fill{height:100%;background:linear-gradient(90deg,var(--accent),#f59e0b);border-radius:99px;transition:width .5s}
+.quick-pay{display:flex;gap:8px;margin-top:12px}
+
+/* ── FAB ── */
+.fab{position:fixed;bottom:max(24px,env(safe-area-inset-bottom,24px));right:18px;width:56px;height:56px;border-radius:99px;background:var(--accent);color:#111;font-size:28px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(245,166,35,.4);cursor:pointer;border:none;z-index:150;transition:transform .15s;font-weight:700;-webkit-tap-highlight-color:transparent}
+.fab:active{transform:scale(.9)}
+
+/* ── EMPTY ── */
+.empty{text-align:center;padding:32px 16px;color:var(--muted)}
+.empty-icon{font-size:38px;margin-bottom:10px}
+.empty-text{font-size:13px}
+
+/* ── LOADING ── */
+.loading{display:flex;align-items:center;justify-content:center;min-height:100vh;flex-direction:column;gap:14px}
+.loading-spinner{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ── PROFIT SECTION ── */
+.profit-row{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+
+/* ── TOAST ── */
+.toast{position:fixed;bottom:max(90px,calc(env(safe-area-inset-bottom)+80px));left:50%;transform:translateX(-50%) translateY(20px);background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px 18px;font-size:13px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:400;white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.toast.success{border-color:var(--g);color:var(--g)}
+.toast.error{border-color:var(--red);color:var(--red)}
+/* ── PIN GATE ── */
+.pin-screen{position:fixed;inset:0;background:var(--bg);z-index:500;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;max-width:480px;margin:0 auto}
+.pin-logo{font-size:44px;margin-bottom:8px}
+.pin-title{font-size:22px;font-weight:800;letter-spacing:-.5px;margin-bottom:4px}
+.pin-title span{color:var(--accent)}
+.pin-hint{font-size:13px;color:var(--muted);margin-bottom:28px;text-align:center;line-height:1.5}
+.pin-dots{display:flex;gap:14px;margin-bottom:30px}
+.pin-dot{width:15px;height:15px;border-radius:50%;border:2px solid var(--border);transition:background .15s,border-color .15s}
+.pin-dot.filled{background:var(--accent);border-color:var(--accent)}
+.pin-dot.err{border-color:var(--red)}
+.pin-pad{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;width:100%;max-width:280px}
+.pin-key{aspect-ratio:1;background:var(--card);border:1px solid var(--border);border-radius:50%;color:var(--text);font-family:'DM Mono',monospace;font-size:24px;font-weight:600;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:transform .1s,background .15s;display:flex;align-items:center;justify-content:center}
+.pin-key:active{transform:scale(.92);background:var(--surface)}
+.pin-key.ghost{background:none;border:none;font-size:15px;color:var(--muted)}
+.pin-shake{animation:shake .35s}
+@keyframes shake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-9px)}40%,80%{transform:translateX(9px)}}
+</style>
+
+</head>
+<body>
+
+<!-- Firebase SDK — loaded before app script -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+<div id="app">
+  <!-- Loading screen -->
+  <div class="loading" id="loading">
+    <div class="loading-spinner"></div>
+    <div style="color:var(--muted);font-size:13px">Connecting to FleetLedger...</div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════════
+// PASTE YOUR FIREBASE CONFIG HERE
+// ═══════════════════════════════════════════════════════════════════
+const firebaseConfig = {
+  apiKey: "AIzaSyAreA-bIENF7iB8y1ddHE38OZ5OekrYURs",
+  authDomain: "fleet-manager-prabhatc.firebaseapp.com",
+  databaseURL: "https://fleet-manager-prabhatc-default-rtdb.firebaseio.com",
+  projectId: "fleet-manager-prabhatc",
+  storageBucket: "fleet-manager-prabhatc.firebasestorage.app",
+  messagingSenderId: "479781496706",
+  appId: "1:479781496706:web:d90d69b3a7a816682ed19b"
+};
+// ═══════════════════════════════════════════════════════════════════
+
+// ── INIT ──────────────────────────────────────────────────────────
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+const ROOT = 'fleetledger';
+
+// ── CONSTANTS ────────────────────────────────────────────────────
+const EXP_CATS = ["Fuel","Toll","Driver Salary","Maintenance","Tyre","Insurance","Permit","RTO Fine","Loan EMI","Loading/Unloading","Miscellaneous"];
+const STATUSES = ["Pending","In Transit","Delivered","Cancelled"];
+const MONTHS   = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const CAT_ICON = {Fuel:"⛽","Driver Salary":"👤",Maintenance:"🔧",Tyre:"⭕",Insurance:"🛡️","Loan EMI":"🏦",Toll:"🛣️",Permit:"📄","RTO Fine":"⚠️","Loading/Unloading":"📦",Miscellaneous:"📌"};
+const ST_ICON  = {Pending:"🕐","In Transit":"🚛",Delivered:"✅",Cancelled:"❌"};
+const ST_BADGE = {Pending:"badge-blue","In Transit":"badge-amber",Delivered:"badge-green",Cancelled:"badge-red"};
+
+// ── UTILS ────────────────────────────────────────────────────────
+const fmt   = n  => "₹" + Number(n||0).toLocaleString("en-IN");
+const today = () => new Date().toISOString().split("T")[0];
+const uid   = () => db.ref().push().key;
+const inRng = (d,s,e) => d >= s && d <= e;
+
+let selMonth = new Date().getMonth();
+let selYear  = new Date().getFullYear();
+let activeTab = "dashboard";
+
+// ── STATE (mirrors Firebase) ─────────────────────────────────────
+let state = { trucks:{}, trips:{}, expenses:{}, loans:{} };
+
+// ── SEED DATA ────────────────────────────────────────────────────
+// purchase = what he paid for it; value = what it's worth today (he can update)
+// status: "active" (in fleet) or "sold". When sold we store saleDate + salePrice.
+const SEED_TRUCKS = [
+  {name:"Truck 1",plate:"MH12AB1234",owned:true, purchase:1200000,value:850000,status:"active"},
+  {name:"Truck 2",plate:"MH12CD5678",owned:true, purchase:1100000,value:780000,status:"active"},
+  {name:"Truck 3",plate:"MH12EF9012",owned:false,purchase:1000000,value:720000,status:"active"},
+  {name:"Truck 4",plate:"MH12GH3456",owned:false,purchase:1150000,value:800000,status:"active"},
+  {name:"Truck 5",plate:"MH12IJ7890",owned:false,purchase:900000, value:650000,status:"active"},
+];
+const SEED_LOANS_RAW = [
+  {truckIdx:2,lender:"SBI Bank",  principal:800000,paid:200000,emi:18000,rate:11,nextDate:"2026-06-05",startDate:"2024-01-05"},
+  {truckIdx:3,lender:"HDFC Bank", principal:950000,paid:380000,emi:22000,rate:10.5,nextDate:"2026-06-10",startDate:"2023-08-10"},
+  {truckIdx:4,lender:"Axis Bank", principal:700000,paid:560000,emi:16500,rate:12,nextDate:"2026-06-15",startDate:"2023-03-15"},
+];
+
+// ── FIREBASE HELPERS ─────────────────────────────────────────────
+function ref(path){ return db.ref(`${ROOT}/${path}`); }
+
+async function fbSet(path, data){
+  try { await ref(path).set(data); return true; }
+  catch(e){ showToast("Save failed: "+e.message,"error"); return false; }
+}
+async function fbUpdate(path, data){
+  try { await ref(path).update(data); return true; }
+  catch(e){ showToast("Update failed","error"); return false; }
+}
+async function fbRemove(path){
+  try { await ref(path).remove(); return true; }
+  catch(e){ showToast("Delete failed","error"); return false; }
+}
+
+// ── TOAST ────────────────────────────────────────────────────────
+let toastTimer;
+function showToast(msg, type="success"){
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.className = `toast show ${type}`;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>{ t.className="toast"; }, 2200);
+}
+
+// ── SYNC INDICATOR ───────────────────────────────────────────────
+function setSyncDot(status){
+  const d = document.getElementById("syncDot");
+  if(d) d.className = "sync-dot " + status;
+}
+
+// ── BOOTSTRAP ────────────────────────────────────────────────────
+async function bootstrap(){
+  // Show what's happening in loading screen
+  const loadingDiv = document.getElementById("loading");
+
+  // Timeout after 10 seconds with a clear message
+  const timeout = setTimeout(()=>{
+    loadingDiv.innerHTML = `
+      <div style="padding:32px;text-align:center">
+        <div style="font-size:32px;margin-bottom:12px">⏱️</div>
+        <div style="font-size:15px;font-weight:700;color:var(--accent)">Taking too long...</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:10px;line-height:1.6">
+          Check:<br>
+          1. Internet is ON<br>
+          2. Firebase Rules are set to <b style="color:var(--g)">true</b><br>
+          3. Try refreshing the page
+        </div>
+        <button class="btn btn-primary" style="margin-top:18px" onclick="location.reload()">Retry</button>
+      </div>`;
+  }, 10000);
+
+  try {
+    // Test connection first with a small ping
+    loadingDiv.querySelector("div:last-child").textContent = "Checking connection...";
+    const connSnap = await Promise.race([
+      ref("trucks").once("value"),
+      new Promise((_,reject) => setTimeout(()=>reject(new Error("Timeout — check your internet and Firebase rules")), 8000))
+    ]);
+
+    clearTimeout(timeout);
+
+    // Seed if empty
+    if(!connSnap.exists()){
+      loadingDiv.querySelector("div:last-child").textContent = "Setting up fleet data...";
+      const truckKeys = [];
+      for(const t of SEED_TRUCKS){
+        const k = uid();
+        truckKeys.push(k);
+        await ref("trucks/"+k).set({...t, id:k});
+      }
+      for(const l of SEED_LOANS_RAW){
+        const k = uid();
+        const truckId = truckKeys[l.truckIdx];
+        await ref("loans/"+k).set({...l, id:k, truckId});
+      }
+      showToast("Fleet data initialised ✓");
+    }
+
+    // Subscribe to all collections
+    let loadCount = 0;
+    const onLoad = () => {
+      loadCount++;
+      if(loadCount === 1){
+        // Show shell after first collection loads
+        clearTimeout(timeout);
+        setSyncDot("live");
+        loadingDiv.remove();
+        gateThenBuild();
+      }
+    };
+
+    ref("trucks").on("value",   snap=>{ state.trucks   = snap.val()||{}; render(); onLoad(); });
+    ref("trips").on("value",    snap=>{ state.trips    = snap.val()||{}; render(); });
+    ref("expenses").on("value", snap=>{ state.expenses = snap.val()||{}; render(); });
+    ref("loans").on("value",    snap=>{ state.loans    = snap.val()||{}; render(); });
+
+  } catch(e) {
+    clearTimeout(timeout);
+    loadingDiv.innerHTML = `
+      <div style="padding:32px;text-align:center">
+        <div style="font-size:32px;margin-bottom:12px">⚠️</div>
+        <div style="font-size:14px;font-weight:700;color:var(--red)">${e.message}</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:10px;line-height:1.7">
+          Most likely fix:<br>
+          Go to Firebase Console →<br>
+          Realtime Database → Rules →<br>
+          Set both values to <b style="color:var(--g)">true</b> →<br>
+          Click <b>Publish</b>
+        </div>
+        <button class="btn btn-primary" style="margin-top:18px" onclick="location.reload()">Retry</button>
+      </div>`;
+  }
+}
+
+db.ref(".info/connected").on("value", snap=>{
+  setSyncDot(snap.val() ? "live" : "error");
+});
+
+// ── PIN GATE ──────────────────────────────────────────────────────
+// NOTE: this locks the APP, not the raw database. Since DB rules are open,
+// the PIN is light obfuscation (hashed), not real security. It stops casual
+// access on a shared/unlocked phone, which is what was asked for.
+function hashPin(p){
+  // simple deterministic hash so the raw PIN isn't stored
+  let h = 5381;
+  for(let i=0;i<p.length;i++){ h = ((h<<5)+h) + p.charCodeAt(i); h |= 0; }
+  return "h"+(h>>>0).toString(36);
+}
+
+let pinEntry = "", pinMode = "verify", pinFirst = "";
+
+async function gateThenBuild(){
+  let stored = null;
+  try { const s = await ref("settings/pin").once("value"); stored = s.val(); } catch(e){}
+  if(!stored){ pinMode = "set"; }       // first run: create a PIN
+  else { pinMode = "verify"; }
+  renderPinScreen();
+}
+
+function renderPinScreen(){
+  const app = document.getElementById("app");
+  const titles = {
+    set:    ["Create a PIN", "Pick a 4-digit code you'll remember.<br>You'll need it each time you open the app."],
+    confirm:["Confirm PIN", "Enter the same 4 digits again."],
+    verify: ["Enter PIN", "Enter your 4-digit code to unlock."]
+  };
+  const [title, hint] = titles[pinMode];
+  app.innerHTML = `
+    <div class="pin-screen" id="pinScreen">
+      <div class="pin-logo">🚛</div>
+      <div class="pin-title">Fleet<span>Ledger</span></div>
+      <div class="pin-hint">${title} — ${hint}</div>
+      <div class="pin-dots" id="pinDots">
+        ${[0,1,2,3].map(i=>`<div class="pin-dot" data-i="${i}"></div>`).join("")}
+      </div>
+      <div class="pin-pad">
+        ${[1,2,3,4,5,6,7,8,9].map(n=>`<button class="pin-key" onclick="pinPress('${n}')">${n}</button>`).join("")}
+        <button class="pin-key ghost" onclick="pinClear()">Clear</button>
+        <button class="pin-key" onclick="pinPress('0')">0</button>
+        <button class="pin-key ghost" onclick="pinBack()">⌫</button>
+      </div>
+    </div>`;
+  updatePinDots();
+}
+
+function updatePinDots(err){
+  document.querySelectorAll("#pinDots .pin-dot").forEach((d,i)=>{
+    d.className = "pin-dot" + (i<pinEntry.length?" filled":"") + (err?" err":"");
+  });
+}
+
+function pinPress(n){
+  if(pinEntry.length>=4) return;
+  pinEntry += n;
+  updatePinDots();
+  if(pinEntry.length===4) setTimeout(pinSubmit, 120);
+}
+function pinBack(){ pinEntry = pinEntry.slice(0,-1); updatePinDots(); }
+function pinClear(){ pinEntry = ""; updatePinDots(); }
+
+function pinFail(){
+  const s = document.getElementById("pinScreen");
+  updatePinDots(true);
+  s.classList.add("pin-shake");
+  setTimeout(()=>{ s.classList.remove("pin-shake"); pinEntry=""; updatePinDots(); }, 400);
+}
+
+async function pinSubmit(){
+  if(pinMode==="set"){
+    pinFirst = pinEntry; pinEntry=""; pinMode="confirm"; renderPinScreen(); return;
+  }
+  if(pinMode==="confirm"){
+    if(pinEntry===pinFirst){
+      await fbSet("settings/pin", hashPin(pinEntry));
+      enterApp();
+    } else {
+      pinFirst=""; pinMode="set"; pinFail(); showToast("Didn't match — try again","error");
+    }
+    return;
+  }
+  // verify
+  let stored=null;
+  try { const s = await ref("settings/pin").once("value"); stored=s.val(); } catch(e){}
+  if(hashPin(pinEntry)===stored){ enterApp(); }
+  else { pinFail(); }
+}
+
+function enterApp(){ pinEntry=""; buildShell(); }
+
+// ── BUILD SHELL ───────────────────────────────────────────────────
+function buildShell(){
+  const app = document.getElementById("app");
+  app.innerHTML = `
+    <div class="topbar">
+      <div>
+        <div class="topbar-title">Fleet<span>Ledger</span></div>
+        <div class="topbar-sub" id="topSub">5 TRUCKS · 3 ON LOAN</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <div id="syncDot" class="sync-dot live" title="Firebase sync"></div>
+        <div style="font-size:22px;cursor:pointer" onclick="openSettings()">⚙️</div>
+      </div>
+    </div>
+
+    <div class="nav">
+      <button class="nav-btn active" data-tab="dashboard" onclick="switchTab('dashboard')"><span class="nav-icon">📊</span>Summary</button>
+      <button class="nav-btn" data-tab="trips"     onclick="switchTab('trips')"><span class="nav-icon">🗺️</span>Trips</button>
+      <button class="nav-btn" data-tab="expenses"  onclick="switchTab('expenses')"><span class="nav-icon">💸</span>Expenses</button>
+      <button class="nav-btn" data-tab="trucks"    onclick="switchTab('trucks')"><span class="nav-icon">🚛</span>Fleet</button>
+      <button class="nav-btn" data-tab="loans"     onclick="switchTab('loans')"><span class="nav-icon">🏦</span>Loans</button>
+      <button class="nav-btn" data-tab="worth"     onclick="switchTab('worth')"><span class="nav-icon">💰</span>Worth</button>
+    </div>
+
+    <div class="content" id="content">
+      <div class="tab-pane active" id="tab-dashboard"></div>
+      <div class="tab-pane" id="tab-trips"></div>
+      <div class="tab-pane" id="tab-expenses"></div>
+      <div class="tab-pane" id="tab-trucks"></div>
+      <div class="tab-pane" id="tab-loans"></div>
+      <div class="tab-pane" id="tab-worth"></div>
+    </div>
+
+    <div class="modal-bg" id="settingsModal">
+      <div class="modal">
+        <div class="modal-handle"></div>
+        <div class="modal-header"><div class="modal-title">Settings & Backup</div><button class="modal-close" onclick="closeSettings()">✕</button></div>
+
+        <div class="card-title">Data Safety</div>
+        <button class="btn btn-green btn-full" style="margin-bottom:10px" onclick="exportData()">⬇️ Download Backup</button>
+        <p style="font-size:11px;color:var(--muted);line-height:1.5;margin-bottom:16px">Saves everything to a file. Do this monthly and keep it in Google Drive or email. This is your insurance if anything goes wrong.</p>
+
+        <button class="btn btn-ghost btn-full" style="margin-bottom:6px" onclick="document.getElementById('restoreFile').click()">⬆️ Restore From Backup</button>
+        <input type="file" id="restoreFile" accept="application/json,.json" style="display:none" onchange="restoreData(this)"/>
+        <p style="font-size:11px;color:var(--red);line-height:1.5;margin-bottom:18px">⚠️ Restoring replaces ALL current data with the file's contents.</p>
+
+        <div class="card-title">Security</div>
+        <button class="btn btn-ghost btn-full" style="margin-bottom:8px" onclick="changePin()">🔑 Change PIN</button>
+        <button class="btn btn-outline btn-full" onclick="lockApp()">🔒 Lock Now</button>
+      </div>
+    </div>
+  `;
+  render();
+}
+
+// ── SETTINGS / BACKUP ─────────────────────────────────────────────
+function openSettings(){ document.getElementById("settingsModal")?.classList.add("open"); }
+function closeSettings(){ document.getElementById("settingsModal")?.classList.remove("open"); }
+
+function lockApp(){
+  closeSettings();
+  pinEntry=""; pinMode="verify";
+  renderPinScreen();
+}
+
+async function changePin(){
+  closeSettings();
+  await fbRemove("settings/pin");   // clear; gate will ask to set a new one
+  pinEntry=""; pinFirst=""; pinMode="set";
+  renderPinScreen();
+}
+
+function exportData(){
+  const backup = {
+    _app: "FleetLedger",
+    _exportedAt: new Date().toISOString(),
+    trucks: state.trucks||{},
+    trips: state.trips||{},
+    expenses: state.expenses||{},
+    loans: state.loans||{}
+  };
+  const blob = new Blob([JSON.stringify(backup,null,2)], {type:"application/json"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  const stamp = new Date().toISOString().split("T")[0];
+  a.href = url; a.download = `fleetledger-backup-${stamp}.json`;
+  document.body.appendChild(a); a.click(); a.remove();
+  URL.revokeObjectURL(url);
+  showToast("Backup downloaded ✓");
+}
+
+function restoreData(input){
+  const file = input.files?.[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = async ()=>{
+    try {
+      const data = JSON.parse(reader.result);
+      if(!data || data._app!=="FleetLedger" || !("trucks" in data)){
+        showToast("Not a valid FleetLedger backup","error"); input.value=""; return;
+      }
+      if(!confirm("This will REPLACE all current data with the backup. Continue?")){ input.value=""; return; }
+      await ref("trucks").set(data.trucks||{});
+      await ref("trips").set(data.trips||{});
+      await ref("expenses").set(data.expenses||{});
+      await ref("loans").set(data.loans||{});
+      closeSettings();
+      showToast("Data restored ✓");
+    } catch(e){
+      showToast("Couldn't read that file","error");
+    }
+    input.value="";
+  };
+  reader.readAsText(file);
+}
+
+function switchTab(tab){
+  activeTab = tab;
+  document.querySelectorAll(".nav-btn").forEach(b=>b.classList.toggle("active", b.dataset.tab===tab));
+  document.querySelectorAll(".tab-pane").forEach(p=>p.classList.toggle("active", p.id==="tab-"+tab));
+  render();
+}
+
+// ── COMPUTED ──────────────────────────────────────────────────────
+function getMonthRange(){
+  const s = new Date(selYear,selMonth,1).toISOString().split("T")[0];
+  const e = new Date(selYear,selMonth+1,0).toISOString().split("T")[0];
+  return {s,e};
+}
+function truckList(){ return Object.values(state.trucks).sort((a,b)=>a.name.localeCompare(b.name)); }
+function activeTrucks(){ return truckList().filter(t=>t.status!=="sold"); }
+function tripList(){  return Object.values(state.trips).sort((a,b)=>b.date.localeCompare(a.date)); }
+function expList(){   return Object.values(state.expenses).sort((a,b)=>b.date.localeCompare(a.date)); }
+function loanList(){  return Object.values(state.loans); }
+
+// ── RENDER DISPATCHER ─────────────────────────────────────────────
+function render(){
+  const trucks = activeTrucks();
+  const loans  = loanList();
+  const sub = document.getElementById("topSub");
+  if(sub) sub.textContent = `${trucks.length} TRUCKS · ${loans.length} ON LOAN`;
+
+  switch(activeTab){
+    case "dashboard": renderDashboard(); break;
+    case "trips":     renderTrips();     break;
+    case "expenses":  renderExpenses();  break;
+    case "trucks":    renderFleet();     break;
+    case "loans":     renderLoans();     break;
+    case "worth":     renderWorth();     break;
+  }
+}
+
+// ── MONTH PICKER HTML ─────────────────────────────────────────────
+function monthPickerHTML(){
+  return `<div class="month-row">${MONTHS.map((m,i)=>`
+    <div class="chip ${i===selMonth?"active":""}" onclick="selMonth=${i};render()">${m} '${String(selYear).slice(2)}</div>
+  `).join("")}</div>`;
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// DASHBOARD
+// ═══════════════════════════════════════════════════════════════════
+function renderDashboard(){
+  const {s,e} = getMonthRange();
+  const trips = tripList().filter(t=>inRng(t.date,s,e));
+  const exps  = expList().filter(x=>inRng(x.date,s,e));
+  const income  = trips.filter(t=>t.status==="Delivered").reduce((a,t)=>a+Number(t.freight||0),0);
+  const expTot  = exps.reduce((a,x)=>a+Number(x.amount||0),0);
+  const profit  = income - expTot;
+  const pct     = income ? Math.max(0,Math.min(100,(profit/income)*100)) : 0;
+  const delivered = trips.filter(t=>t.status==="Delivered").length;
+  const active    = trips.filter(t=>t.status==="In Transit").length;
+  const loans  = loanList();
+  const loanOut = loans.reduce((a,l)=>a+(Number(l.principal)-Number(l.paid)),0);
+  const emi     = loans.reduce((a,l)=>a+Number(l.emi||0),0);
+
+  const topExps = EXP_CATS.map(cat=>({cat,total:exps.filter(x=>x.category===cat).reduce((a,x)=>a+Number(x.amount||0),0)}))
+    .filter(x=>x.total>0).sort((a,b)=>b.total-a.total).slice(0,5);
+
+  document.getElementById("tab-dashboard").innerHTML = `
+    ${monthPickerHTML()}
+
+    <div class="card">
+      <div class="card-title">P&L — ${MONTHS[selMonth]} ${selYear}</div>
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-label">Income</div><div class="stat-val green">${fmt(income)}</div></div>
+        <div class="stat-box"><div class="stat-label">Expenses</div><div class="stat-val red">${fmt(expTot)}</div></div>
+      </div>
+      <div class="profit-row">
+        <span style="font-size:12px;color:var(--muted)">Net Profit</span>
+        <span style="font-size:18px;font-weight:800;font-family:'DM Mono',monospace;color:${profit>=0?"var(--g)":"var(--red)"}">${fmt(profit)}</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:8px">
+        <span style="font-size:10px;color:var(--muted)">Margin</span>
+        <span style="font-size:10px;color:var(--muted);font-family:'DM Mono',monospace">${pct.toFixed(1)}%</span>
+      </div>
+      <div class="bar-track"><div class="bar-fill" style="width:${pct}%;background:${profit>=0?"var(--g)":"var(--red)"}"></div></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Trip Activity</div>
+      <div class="stat-row stat-3">
+        <div class="stat-box" style="text-align:center"><div class="stat-val white">${trips.length}</div><div class="stat-label" style="margin-top:4px">Total</div></div>
+        <div class="stat-box" style="text-align:center"><div class="stat-val green">${delivered}</div><div class="stat-label" style="margin-top:4px">Done</div></div>
+        <div class="stat-box" style="text-align:center"><div class="stat-val amber">${active}</div><div class="stat-label" style="margin-top:4px">Active</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Loan Obligations</div>
+      <table class="sum-table"><tbody>
+        <tr><td class="key">Trucks on loan</td><td class="val">${loans.length}</td></tr>
+        <tr><td class="key">Total outstanding</td><td class="val red">${fmt(loanOut)}</td></tr>
+        <tr><td class="key">Monthly EMI</td><td class="val amber">${fmt(emi)}</td></tr>
+      </tbody></table>
+    </div>
+
+    ${topExps.length?`<div class="card">
+      <div class="card-title">Top Expenses</div>
+      ${topExps.map(({cat,total})=>`
+        <div class="list-item" style="padding:8px 0;cursor:default">
+          <div style="flex:1">
+            <div style="font-size:13px;font-weight:600">${cat}</div>
+            <div class="bar-track"><div class="bar-fill" style="width:${((total/expTot)*100)}%;background:var(--accent)"></div></div>
+          </div>
+          <div style="font-family:'DM Mono',monospace;font-size:13px;font-weight:700;margin-left:12px">${fmt(total)}</div>
+        </div>`).join("")}
+    </div>`:""}
+  `;
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// TRIPS
+// ═══════════════════════════════════════════════════════════════════
+let tripFilTruck="All", tripFilStatus="All", tripEditId=null, tripDelConfirm=null;
+
+function renderTrips(){
+  const {s,e} = getMonthRange();
+  const trucks = activeTrucks();
+  let list = tripList().filter(t=>inRng(t.date,s,e));
+  if(tripFilTruck!=="All")  list = list.filter(t=>t.truckId===tripFilTruck);
+  if(tripFilStatus!=="All") list = list.filter(t=>t.status===tripFilStatus);
+  const totalFreight = list.filter(t=>t.status==="Delivered").reduce((a,t)=>a+Number(t.freight||0),0);
+
+  document.getElementById("tab-trips").innerHTML = `
+    ${monthPickerHTML()}
+    <div class="filter-row">
+      <div class="chip sm ${tripFilTruck==="All"?"active":""}" onclick="tripFilTruck='All';renderTrips()">All</div>
+      ${trucks.map(t=>`<div class="chip sm ${tripFilTruck===t.id?"active":""}" onclick="tripFilTruck='${t.id}';renderTrips()">${t.name}</div>`).join("")}
+    </div>
+    <div class="filter-row">
+      ${["All",...STATUSES].map(s=>`<div class="chip sm ${tripFilStatus===s?"active":""}" onclick="tripFilStatus='${s}';renderTrips()">${s}</div>`).join("")}
+    </div>
+    <div class="card">
+      <div class="sec-hdr">
+        <div class="sec-hdr-title">${list.length} Trips</div>
+        <div style="font-family:'DM Mono',monospace;font-size:12px;color:var(--g)">${fmt(totalFreight)}</div>
+      </div>
+      ${list.length===0?`<div class="empty"><div class="empty-icon">🗺️</div><div class="empty-text">No trips this month</div></div>`
+        : list.map(trip=>{
+          const truck = state.trucks[trip.truckId];
+          const isEdit = tripEditId===trip.id;
+          return `
+            <div>
+              <div class="list-item" onclick="tripEditId=tripEditId==='${trip.id}'?null:'${trip.id}';renderTrips()">
+                <div class="li-icon" style="background:var(--surface)">${ST_ICON[trip.status]||"🚛"}</div>
+                <div class="li-body">
+                  <div class="li-title">${escH(trip.from)} → ${escH(trip.to)}</div>
+                  <div class="li-sub">${truck?.name||"?"} · ${trip.date}</div>
+                  <div style="margin-top:4px;display:flex;gap:5px;align-items:center;flex-wrap:wrap">
+                    <span class="badge ${ST_BADGE[trip.status]||"badge-grey"}">${trip.status}</span>
+                    ${trip.client?`<span style="font-size:10px;color:var(--muted)">${escH(trip.client)}</span>`:""}
+                  </div>
+                </div>
+                <div class="li-right">
+                  <div class="li-amount green">${fmt(trip.freight)}</div>
+                  <div class="li-meta">${trip.km||"—"} km</div>
+                  <div class="edit-hint">${isEdit?"▲ close":"✏️ edit"}</div>
+                </div>
+              </div>
+              ${isEdit?tripDelConfirm===trip.id
+                ? confirmHTML("trip",`delTrip('${trip.id}')`,`tripDelConfirm=null;renderTrips()`)
+                : tripEditHTML(trip, trucks)
+              :""}
+            </div>`;
+        }).join("")}
+    </div>
+    <button class="fab" onclick="openTripModal()">+</button>
+    ${tripModalHTML(trucks)}
+  `;
+}
+
+function tripEditHTML(trip, trucks){
+  return `<div class="inline-edit">
+    <div class="inline-edit-title">Edit Trip</div>
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">From</label><input class="form-input" id="te_from" value="${escH(trip.from||"")}"/></div>
+      <div class="form-group"><label class="form-label">To</label><input class="form-input" id="te_to" value="${escH(trip.to||"")}"/></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">Freight ₹</label><input class="form-input" type="number" id="te_freight" value="${trip.freight||""}"/></div>
+      <div class="form-group"><label class="form-label">KM</label><input class="form-input" type="number" id="te_km" value="${trip.km||""}"/></div>
+    </div>
+    <div class="form-group"><label class="form-label">Truck</label>
+      <select class="form-select" id="te_truck">
+        ${trucks.map(t=>`<option value="${t.id}" ${t.id===trip.truckId?"selected":""}>${t.name} — ${t.plate}</option>`).join("")}
+      </select>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">Client</label><input class="form-input" id="te_client" value="${escH(trip.client||"")}"/></div>
+      <div class="form-group"><label class="form-label">Date</label><input class="form-input" type="date" id="te_date" value="${trip.date||today()}"/></div>
+    </div>
+    <div class="form-group"><label class="form-label">Status</label>
+      <select class="form-select" id="te_status">
+        ${STATUSES.map(s=>`<option ${s===trip.status?"selected":""}>${s}</option>`).join("")}
+      </select>
+    </div>
+    <div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="te_notes">${escH(trip.notes||"")}</textarea></div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn btn-red btn-xs" onclick="tripDelConfirm='${trip.id}';renderTrips()">🗑 Delete</button>
+      <button class="btn btn-ghost btn-xs" onclick="tripEditId=null;renderTrips()">Cancel</button>
+      <button class="btn btn-green btn-xs" style="flex:1" onclick="saveTrip('${trip.id}')">Save Changes</button>
+    </div>
+  </div>`;
+}
+
+function tripModalHTML(trucks){
+  return `<div class="modal-bg" id="tripModal">
+    <div class="modal">
+      <div class="modal-handle"></div>
+      <div class="modal-header"><div class="modal-title">New Trip</div><button class="modal-close" onclick="closeTripModal()">✕</button></div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">From</label><input class="form-input" id="tn_from" placeholder="City"/></div>
+        <div class="form-group"><label class="form-label">To</label><input class="form-input" id="tn_to" placeholder="City"/></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Freight ₹</label><input class="form-input" type="number" id="tn_freight" placeholder="0"/></div>
+        <div class="form-group"><label class="form-label">KM</label><input class="form-input" type="number" id="tn_km" placeholder="0"/></div>
+      </div>
+      <div class="form-group"><label class="form-label">Truck</label>
+        <select class="form-select" id="tn_truck">
+          ${trucks.map(t=>`<option value="${t.id}">${t.name} — ${t.plate}</option>`).join("")}
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Client</label><input class="form-input" id="tn_client" placeholder="Name"/></div>
+        <div class="form-group"><label class="form-label">Date</label><input class="form-input" type="date" id="tn_date" value="${today()}"/></div>
+      </div>
+      <div class="form-group"><label class="form-label">Status</label>
+        <select class="form-select" id="tn_status">
+          ${STATUSES.map(s=>`<option>${s}</option>`).join("")}
+        </select>
+      </div>
+      <div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="tn_notes" placeholder="Optional..."></textarea></div>
+      <div style="display:flex;gap:8px">
+        <button class="btn btn-ghost btn-sm" onclick="closeTripModal()">Cancel</button>
+        <button class="btn btn-green btn-sm" style="flex:1" onclick="addTrip()">Add Trip</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function openTripModal(){ document.getElementById("tripModal")?.classList.add("open"); }
+function closeTripModal(){ document.getElementById("tripModal")?.classList.remove("open"); }
+
+async function addTrip(){
+  const data = {
+    id: uid(), from: val("tn_from"), to: val("tn_to"),
+    freight: num("tn_freight"), km: num("tn_km"),
+    truckId: val("tn_truck"), client: val("tn_client"),
+    date: val("tn_date")||today(), status: val("tn_status"),
+    notes: val("tn_notes")
+  };
+  if(!data.from||!data.to){ showToast("From and To are required","error"); return; }
+  await fbSet(`trips/${data.id}`, data);
+  closeTripModal(); showToast("Trip added ✓");
+}
+
+async function saveTrip(id){
+  const data = {
+    id, from: val("te_from"), to: val("te_to"),
+    freight: num("te_freight"), km: num("te_km"),
+    truckId: val("te_truck"), client: val("te_client"),
+    date: val("te_date")||today(), status: val("te_status"),
+    notes: val("te_notes")
+  };
+  if(!data.from||!data.to){ showToast("From and To required","error"); return; }
+  await fbUpdate(`trips/${id}`, data);
+  tripEditId=null; showToast("Trip updated ✓");
+}
+
+async function delTrip(id){
+  await fbRemove(`trips/${id}`);
+  tripEditId=null; tripDelConfirm=null; showToast("Trip deleted");
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// EXPENSES
+// ═══════════════════════════════════════════════════════════════════
+let expFilCat="All", expFilTruck="All", expEditId=null, expDelConfirm=null;
+
+function renderExpenses(){
+  const {s,e} = getMonthRange();
+  const trucks = activeTrucks();
+  let list = expList().filter(x=>inRng(x.date,s,e));
+  if(expFilCat!=="All")   list = list.filter(x=>x.category===expFilCat);
+  if(expFilTruck!=="All") list = list.filter(x=>x.truckId===expFilTruck);
+  const total = list.reduce((a,x)=>a+Number(x.amount||0),0);
+
+  document.getElementById("tab-expenses").innerHTML = `
+    ${monthPickerHTML()}
+    <div class="filter-row">
+      <div class="chip sm ${expFilCat==="All"?"active":""}" onclick="expFilCat='All';renderExpenses()">All</div>
+      ${EXP_CATS.map(c=>`<div class="chip sm ${expFilCat===c?"active":""}" onclick="expFilCat='${c}';renderExpenses()">${c}</div>`).join("")}
+    </div>
+    <div class="filter-row">
+      <div class="chip sm ${expFilTruck==="All"?"active":""}" onclick="expFilTruck='All';renderExpenses()">All Trucks</div>
+      ${trucks.map(t=>`<div class="chip sm ${expFilTruck===t.id?"active":""}" onclick="expFilTruck='${t.id}';renderExpenses()">${t.name}</div>`).join("")}
+    </div>
+    <div class="card">
+      <div class="sec-hdr">
+        <div class="sec-hdr-title">${list.length} Entries</div>
+        <div style="font-family:'DM Mono',monospace;font-size:13px;color:var(--red);font-weight:700">${fmt(total)}</div>
+      </div>
+      ${list.length===0?`<div class="empty"><div class="empty-icon">💸</div><div class="empty-text">No expenses logged</div></div>`
+        : list.map(exp=>{
+          const truck = state.trucks[exp.truckId];
+          const isEdit = expEditId===exp.id;
+          return `<div>
+            <div class="list-item" onclick="expEditId=expEditId==='${exp.id}'?null:'${exp.id}';renderExpenses()">
+              <div class="li-icon" style="background:rgba(224,92,92,.1);font-size:18px">${CAT_ICON[exp.category]||"📌"}</div>
+              <div class="li-body">
+                <div class="li-title">${escH(exp.category)}</div>
+                <div class="li-sub">${truck?.name||"General"} · ${exp.date}</div>
+                ${exp.note?`<div class="li-note">${escH(exp.note)}</div>`:""}
+              </div>
+              <div class="li-right">
+                <div class="li-amount red">${fmt(exp.amount)}</div>
+                <div class="edit-hint">${isEdit?"▲ close":"✏️ edit"}</div>
+              </div>
+            </div>
+            ${isEdit?expDelConfirm===exp.id
+              ? confirmHTML("expense",`delExp('${exp.id}')`,`expDelConfirm=null;renderExpenses()`)
+              : expEditHTML(exp, trucks)
+            :""}
+          </div>`;
+        }).join("")}
+    </div>
+    <button class="fab" onclick="openExpModal()">+</button>
+    ${expModalHTML(trucks)}
+  `;
+}
+
+function expEditHTML(exp, trucks){
+  return `<div class="inline-edit">
+    <div class="inline-edit-title">Edit Expense</div>
+    <div class="form-group"><label class="form-label">Category</label>
+      <select class="form-select" id="ee_cat">
+        ${EXP_CATS.map(c=>`<option ${c===exp.category?"selected":""}>${c}</option>`).join("")}
+      </select>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">Amount ₹</label><input class="form-input" type="number" id="ee_amount" value="${exp.amount||""}"/></div>
+      <div class="form-group"><label class="form-label">Date</label><input class="form-input" type="date" id="ee_date" value="${exp.date||today()}"/></div>
+    </div>
+    <div class="form-group"><label class="form-label">Truck (optional)</label>
+      <select class="form-select" id="ee_truck">
+        <option value="">General / All</option>
+        ${trucks.map(t=>`<option value="${t.id}" ${t.id===exp.truckId?"selected":""}>${t.name} — ${t.plate}</option>`).join("")}
+      </select>
+    </div>
+    <div class="form-group"><label class="form-label">Note</label><input class="form-input" id="ee_note" value="${escH(exp.note||"")}"/></div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn btn-red btn-xs" onclick="expDelConfirm='${exp.id}';renderExpenses()">🗑 Delete</button>
+      <button class="btn btn-ghost btn-xs" onclick="expEditId=null;renderExpenses()">Cancel</button>
+      <button class="btn btn-red btn-xs" style="flex:1;background:rgba(224,92,92,.2)" onclick="saveExp('${exp.id}')">Save Changes</button>
+    </div>
+  </div>`;
+}
+
+function expModalHTML(trucks){
+  return `<div class="modal-bg" id="expModal">
+    <div class="modal">
+      <div class="modal-handle"></div>
+      <div class="modal-header"><div class="modal-title">New Expense</div><button class="modal-close" onclick="closeExpModal()">✕</button></div>
+      <div class="form-group"><label class="form-label">Category</label>
+        <select class="form-select" id="en_cat">
+          ${EXP_CATS.map(c=>`<option>${c}</option>`).join("")}
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Amount ₹</label><input class="form-input" type="number" id="en_amount" placeholder="0"/></div>
+        <div class="form-group"><label class="form-label">Date</label><input class="form-input" type="date" id="en_date" value="${today()}"/></div>
+      </div>
+      <div class="form-group"><label class="form-label">Truck (optional)</label>
+        <select class="form-select" id="en_truck">
+          <option value="">General / All</option>
+          ${trucks.map(t=>`<option value="${t.id}">${t.name} — ${t.plate}</option>`).join("")}
+        </select>
+      </div>
+      <div class="form-group"><label class="form-label">Note</label><input class="form-input" id="en_note" placeholder="Detail..."/></div>
+      <div style="display:flex;gap:8px">
+        <button class="btn btn-ghost btn-sm" onclick="closeExpModal()">Cancel</button>
+        <button class="btn btn-red btn-sm" style="flex:1" onclick="addExp()">Add Expense</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function openExpModal(){ document.getElementById("expModal")?.classList.add("open"); }
+function closeExpModal(){ document.getElementById("expModal")?.classList.remove("open"); }
+
+async function addExp(){
+  const data = {
+    id: uid(), category: val("en_cat"), amount: num("en_amount"),
+    date: val("en_date")||today(), truckId: val("en_truck"), note: val("en_note")
+  };
+  if(!data.amount){ showToast("Amount is required","error"); return; }
+  await fbSet(`expenses/${data.id}`, data);
+  closeExpModal(); showToast("Expense added ✓");
+}
+
+async function saveExp(id){
+  const data = {
+    id, category: val("ee_cat"), amount: num("ee_amount"),
+    date: val("ee_date")||today(), truckId: val("ee_truck"), note: val("ee_note")
+  };
+  if(!data.amount){ showToast("Amount required","error"); return; }
+  await fbUpdate(`expenses/${id}`, data);
+  expEditId=null; showToast("Expense updated ✓");
+}
+
+async function delExp(id){
+  await fbRemove(`expenses/${id}`);
+  expEditId=null; expDelConfirm=null; showToast("Expense deleted");
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// FLEET
+// ═══════════════════════════════════════════════════════════════════
+let truckEditId=null, truckDelConfirm=null, truckSellId=null;
+
+function renderFleet(){
+  const trucks = truckList();
+  const active = trucks.filter(t=>t.status!=="sold");
+  const sold   = trucks.filter(t=>t.status==="sold");
+  const allTrips = tripList();
+  const allExps  = expList();
+  const loans = loanList();
+
+  const activeCard = (truck)=>{
+    const tTrips = allTrips.filter(t=>t.truckId===truck.id&&t.status==="Delivered");
+    const tExps  = allExps.filter(x=>x.truckId===truck.id);
+    const income = tTrips.reduce((a,t)=>a+Number(t.freight||0),0);
+    const spent  = tExps.reduce((a,x)=>a+Number(x.amount||0),0);
+    const loan   = loans.find(l=>l.truckId===truck.id);
+    const isEdit = truckEditId===truck.id;
+    const isSell = truckSellId===truck.id;
+    const purchase = Number(truck.purchase||0);
+    const value    = Number(truck.value||0);
+    const valDelta = value - purchase; // unrealised gain/loss vs purchase
+    return `<div class="truck-card ${isEdit||isSell?"editing":""}">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px">
+        <div>
+          <div style="font-weight:700;font-size:15px">🚛 ${escH(truck.name)}</div>
+          <div style="font-size:11px;color:var(--muted);font-family:'DM Mono',monospace;margin-top:2px">${escH(truck.plate)}</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:5px">
+          <span class="badge ${loan?"badge-amber":"badge-green"}">${loan?"On Loan":"Owned"}</span>
+          <button class="btn btn-outline btn-xs" onclick="truckSellId=null;truckEditId=truckEditId==='${truck.id}'?null:'${truck.id}';renderFleet()">${isEdit?"✕ Close":"✏️ Edit"}</button>
+        </div>
+      </div>
+      ${isEdit
+        ? (truckDelConfirm===truck.id
+            ? confirmHTML("truck",`delTruck('${truck.id}')`,`truckDelConfirm=null;renderFleet()`)
+            : truckEditFormHTML(truck))
+        : isSell
+          ? truckSellFormHTML(truck, loan)
+          : `<div class="truck-stats">
+              <div class="ts-box"><div class="ts-val green">${fmt(income)}</div><div class="ts-lab">Earned</div></div>
+              <div class="ts-box"><div class="ts-val red">${fmt(spent)}</div><div class="ts-lab">Spent</div></div>
+              <div class="ts-box"><div class="ts-val amber">${tTrips.length}</div><div class="ts-lab">Trips</div></div>
+            </div>
+            <div class="truck-stats" style="margin-top:8px">
+              <div class="ts-box"><div class="ts-val">${fmt(purchase)}</div><div class="ts-lab">Bought For</div></div>
+              <div class="ts-box"><div class="ts-val">${fmt(value)}</div><div class="ts-lab">Worth Now</div></div>
+              <div class="ts-box"><div class="ts-val ${valDelta>=0?"green":"red"}">${valDelta>=0?"+":""}${fmt(valDelta)}</div><div class="ts-lab">Change</div></div>
+            </div>
+            <button class="btn btn-outline btn-xs btn-full" style="margin-top:10px" onclick="truckEditId=null;truckSellId='${truck.id}';renderFleet()">💰 Sell this truck</button>`
+      }
+    </div>`;
+  };
+
+  const soldCard = (truck)=>{
+    const sp = Number(truck.salePrice||0);
+    const pp = Number(truck.purchase||0);
+    const pl = sp - pp; // realised profit/loss on sale
+    return `<div class="truck-card" style="opacity:.85">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px">
+        <div>
+          <div style="font-weight:700;font-size:15px">🚛 ${escH(truck.name)}</div>
+          <div style="font-size:11px;color:var(--muted);font-family:'DM Mono',monospace;margin-top:2px">${escH(truck.plate)} · sold ${truck.saleDate||"—"}</div>
+        </div>
+        <span class="badge badge-grey">Sold</span>
+      </div>
+      <div class="truck-stats">
+        <div class="ts-box"><div class="ts-val">${fmt(pp)}</div><div class="ts-lab">Bought</div></div>
+        <div class="ts-box"><div class="ts-val">${fmt(sp)}</div><div class="ts-lab">Sold</div></div>
+        <div class="ts-box"><div class="ts-val ${pl>=0?"green":"red"}">${pl>=0?"+":""}${fmt(pl)}</div><div class="ts-lab">${pl>=0?"Profit":"Loss"}</div></div>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:10px">
+        <button class="btn btn-ghost btn-xs" style="flex:1" onclick="unsellTruck('${truck.id}')">↩ Undo sale</button>
+        <button class="btn btn-red btn-xs" onclick="delTruck('${truck.id}')">🗑 Remove</button>
+      </div>
+    </div>`;
+  };
+
+  document.getElementById("tab-trucks").innerHTML = `
+    ${active.map(activeCard).join("")}
+    <button class="btn btn-ghost btn-full" onclick="openTruckModal()">+ Add Truck</button>
+    ${sold.length?`
+      <div class="card-title" style="margin-top:16px">Sold Trucks (${sold.length})</div>
+      ${sold.map(soldCard).join("")}
+    `:""}
+    ${truckModalHTML()}
+  `;
+}
+
+function truckEditFormHTML(truck){
+  return `<div style="padding-top:8px">
+    <div class="form-group"><label class="form-label">Truck Name</label><input class="form-input" id="tke_name" value="${escH(truck.name||"")}"/></div>
+    <div class="form-group"><label class="form-label">Number Plate</label><input class="form-input" id="tke_plate" value="${escH(truck.plate||"")}"/></div>
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">Bought For ₹</label><input class="form-input" type="number" id="tke_purchase" value="${truck.purchase||""}"/></div>
+      <div class="form-group"><label class="form-label">Worth Now ₹</label><input class="form-input" type="number" id="tke_value" value="${truck.value||""}"/></div>
+    </div>
+    <div class="checkbox-row">
+      <input type="checkbox" id="tke_owned" ${truck.owned?"checked":""}/>
+      <label for="tke_owned">Fully owned (no loan)</label>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn btn-red btn-xs" onclick="truckDelConfirm='${truck.id}';renderFleet()">🗑 Delete</button>
+      <button class="btn btn-ghost btn-xs" onclick="truckEditId=null;renderFleet()">Cancel</button>
+      <button class="btn btn-primary btn-xs" style="flex:1" onclick="saveTruck('${truck.id}')">Save Changes</button>
+    </div>
+  </div>`;
+}
+
+function truckSellFormHTML(truck, loan){
+  return `<div class="inline-edit" style="margin-top:4px">
+    <div class="inline-edit-title">Sell ${escH(truck.name)}</div>
+    ${loan?`<div class="confirm-box"><div class="confirm-msg" style="color:var(--accent)">⚠️ This truck still has a loan. Selling it here does not close the loan — settle or delete the loan separately in the Loans tab.</div></div>`:""}
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">Sale Price ₹</label><input class="form-input" type="number" id="tks_price" placeholder="0"/></div>
+      <div class="form-group"><label class="form-label">Sale Date</label><input class="form-input" type="date" id="tks_date" value="${today()}"/></div>
+    </div>
+    <div style="font-size:11px;color:var(--muted);margin-bottom:10px">Bought for ${fmt(truck.purchase)} — profit/loss is calculated automatically.</div>
+    <div style="display:flex;gap:8px">
+      <button class="btn btn-ghost btn-xs" onclick="truckSellId=null;renderFleet()">Cancel</button>
+      <button class="btn btn-green btn-xs" style="flex:1" onclick="sellTruck('${truck.id}')">Confirm Sale</button>
+    </div>
+  </div>`;
+}
+
+function truckModalHTML(){
+  return `<div class="modal-bg" id="truckModal">
+    <div class="modal">
+      <div class="modal-handle"></div>
+      <div class="modal-header"><div class="modal-title">Add Truck</div><button class="modal-close" onclick="closeTruckModal()">✕</button></div>
+      <div class="form-group"><label class="form-label">Truck Name</label><input class="form-input" id="tkn_name" placeholder="e.g. Truck 6"/></div>
+      <div class="form-group"><label class="form-label">Number Plate</label><input class="form-input" id="tkn_plate" placeholder="MH12XX0000"/></div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Bought For ₹</label><input class="form-input" type="number" id="tkn_purchase" placeholder="0"/></div>
+        <div class="form-group"><label class="form-label">Worth Now ₹</label><input class="form-input" type="number" id="tkn_value" placeholder="0"/></div>
+      </div>
+      <div class="checkbox-row"><input type="checkbox" id="tkn_owned" checked/><label for="tkn_owned">Fully owned (no loan)</label></div>
+      <div style="display:flex;gap:8px">
+        <button class="btn btn-ghost btn-sm" onclick="closeTruckModal()">Cancel</button>
+        <button class="btn btn-primary btn-sm" style="flex:1" onclick="addTruck()">Add Truck</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function openTruckModal(){ document.getElementById("truckModal")?.classList.add("open"); }
+function closeTruckModal(){ document.getElementById("truckModal")?.classList.remove("open"); }
+
+async function addTruck(){
+  const name = val("tkn_name"), plate = val("tkn_plate");
+  if(!name||!plate){ showToast("Name and plate required","error"); return; }
+  const id = uid();
+  await fbSet(`trucks/${id}`, {id, name, plate, owned: document.getElementById("tkn_owned")?.checked||false, purchase:num("tkn_purchase"), value:num("tkn_value"), status:"active"});
+  closeTruckModal(); showToast("Truck added ✓");
+}
+
+async function saveTruck(id){
+  const name = val("tke_name"), plate = val("tke_plate");
+  if(!name||!plate){ showToast("Name and plate required","error"); return; }
+  await fbUpdate(`trucks/${id}`, {name, plate, owned: document.getElementById("tke_owned")?.checked||false, purchase:num("tke_purchase"), value:num("tke_value")});
+  truckEditId=null; showToast("Truck updated ✓");
+}
+
+async function sellTruck(id){
+  const price = num("tks_price");
+  if(!price){ showToast("Enter sale price","error"); return; }
+  await fbUpdate(`trucks/${id}`, {status:"sold", salePrice:price, saleDate:val("tks_date")||today()});
+  truckSellId=null; showToast("Truck marked as sold ✓");
+}
+
+async function unsellTruck(id){
+  await fbUpdate(`trucks/${id}`, {status:"active", salePrice:null, saleDate:null});
+  showToast("Sale undone — truck back in fleet");
+}
+
+async function delTruck(id){
+  await fbRemove(`trucks/${id}`);
+  truckEditId=null; truckDelConfirm=null; showToast("Truck deleted");
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// LOANS
+// ═══════════════════════════════════════════════════════════════════
+let loanEditId=null, loanDelConfirm=null;
+
+// Splits one EMI into interest vs principal at the current outstanding balance.
+function emiSplit(loan){
+  const remaining = Number(loan.principal||0) - Number(loan.paid||0);
+  const rate = Number(loan.rate||0);
+  const interest = Math.max(0, Math.round(remaining * (rate/12/100)));
+  const principalPart = Math.max(0, Number(loan.emi||0) - interest);
+  return {interest, principalPart, remaining};
+}
+
+function renderLoans(){
+  const loans  = loanList();
+  const trucks = activeTrucks();
+  const totalOut = loans.reduce((a,l)=>a+(Number(l.principal)-Number(l.paid)),0);
+  const totalEMI = loans.reduce((a,l)=>a+Number(l.emi||0),0);
+  const totalInterestThisMonth = loans.reduce((a,l)=>a+emiSplit(l).interest,0);
+
+  document.getElementById("tab-loans").innerHTML = `
+    <div class="card">
+      <div class="card-title">Loan Overview</div>
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-label">Outstanding</div><div class="stat-val red">${fmt(totalOut)}</div></div>
+        <div class="stat-box"><div class="stat-label">Monthly EMI</div><div class="stat-val amber">${fmt(totalEMI)}</div></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:10px">
+        <span style="font-size:11px;color:var(--muted)">Of this month's EMIs, interest is</span>
+        <span style="font-size:13px;font-weight:700;font-family:'DM Mono',monospace;color:var(--red)">${fmt(totalInterestThisMonth)}</span>
+      </div>
+    </div>
+
+    ${loans.map(loan=>{
+      const truck     = state.trucks[loan.truckId];
+      const remaining = Number(loan.principal)-Number(loan.paid);
+      const paidPct   = Math.min(100,(Number(loan.paid)/Number(loan.principal))*100);
+      const isEdit    = loanEditId===loan.id;
+      const {interest, principalPart} = emiSplit(loan);
+      return `<div class="card ${isEdit?"editing":""}">
+        <div style="display:flex;justify-content:space-between;margin-bottom:10px">
+          <div>
+            <div style="font-weight:700;font-size:15px">🚛 ${truck?.name||"Unknown"}</div>
+            <div style="font-size:12px;color:var(--muted);font-family:'DM Mono',monospace;margin-top:2px">${escH(loan.lender||"")}${loan.rate?` · ${loan.rate}%`:""}</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:16px;font-weight:800;color:var(--red);font-family:'DM Mono',monospace">${fmt(remaining)}</div>
+            <div style="font-size:10px;color:var(--muted)">remaining</div>
+            <button class="btn btn-outline btn-xs" style="margin-top:4px" onclick="loanEditId=loanEditId==='${loan.id}'?null:'${loan.id}';renderLoans()">${isEdit?"✕ Close":"✏️ Edit"}</button>
+          </div>
+        </div>
+        ${isEdit
+          ? loanDelConfirm===loan.id
+            ? confirmHTML("loan",`delLoan('${loan.id}')`,`loanDelConfirm=null;renderLoans()`)
+            : loanEditFormHTML(loan, trucks)
+          : `
+          <table class="sum-table"><tbody>
+            <tr><td class="key">Principal</td><td class="val">${fmt(loan.principal)}</td></tr>
+            <tr><td class="key">Paid so far</td><td class="val green">${fmt(loan.paid)}</td></tr>
+            <tr><td class="key">Monthly EMI</td><td class="val amber">${fmt(loan.emi)}</td></tr>
+            ${loan.rate?`<tr><td class="key">↳ goes to interest</td><td class="val red">${fmt(interest)}</td></tr>
+            <tr><td class="key">↳ goes to principal</td><td class="val green">${fmt(principalPart)}</td></tr>`:""}
+            <tr><td class="key">Next EMI date</td><td class="val">${loan.nextDate||"—"}</td></tr>
+          </tbody></table>
+          <div class="loan-track"><div class="loan-fill" style="width:${paidPct}%"></div></div>
+          <div style="display:flex;justify-content:space-between;margin-top:4px">
+            <span style="font-size:10px;color:var(--muted)">Repaid ${paidPct.toFixed(0)}%</span>
+            <span style="font-size:10px;color:var(--muted);font-family:'DM Mono',monospace">Since ${loan.startDate||"—"}</span>
+          </div>
+          <div class="quick-pay">
+            <input class="form-input" type="number" id="pay_${loan.id}" placeholder="Quick pay (EMI: ${fmt(loan.emi)})" style="flex:1"/>
+            <button class="btn btn-green btn-sm" onclick="payLoan('${loan.id}')">Pay</button>
+          </div>`
+        }
+      </div>`;
+    }).join("")}
+
+    <button class="btn btn-ghost btn-full" onclick="openLoanModal()">+ Add Loan</button>
+    ${loanModalHTML(trucks)}
+  `;
+}
+
+function loanEditFormHTML(loan, trucks){
+  return `<div style="padding-top:8px">
+    <div class="form-group"><label class="form-label">Truck</label>
+      <select class="form-select" id="le_truck">
+        ${trucks.map(t=>`<option value="${t.id}" ${t.id===loan.truckId?"selected":""}>${t.name}</option>`).join("")}
+      </select>
+    </div>
+    <div class="form-group"><label class="form-label">Lender / Bank</label><input class="form-input" id="le_lender" value="${escH(loan.lender||"")}"/></div>
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">Principal ₹</label><input class="form-input" type="number" id="le_principal" value="${loan.principal||""}"/></div>
+      <div class="form-group"><label class="form-label">EMI ₹/mo</label><input class="form-input" type="number" id="le_emi" value="${loan.emi||""}"/></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">Paid so far ₹</label><input class="form-input" type="number" id="le_paid" value="${loan.paid||0}"/></div>
+      <div class="form-group"><label class="form-label">Interest Rate %</label><input class="form-input" type="number" step="0.1" id="le_rate" value="${loan.rate||""}"/></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">Start Date</label><input class="form-input" type="date" id="le_start" value="${loan.startDate||today()}"/></div>
+      <div class="form-group"><label class="form-label">Next EMI Date</label><input class="form-input" type="date" id="le_next" value="${loan.nextDate||today()}"/></div>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn btn-red btn-xs" onclick="loanDelConfirm='${loan.id}';renderLoans()">🗑 Delete</button>
+      <button class="btn btn-ghost btn-xs" onclick="loanEditId=null;renderLoans()">Cancel</button>
+      <button class="btn btn-primary btn-xs" style="flex:1" onclick="saveLoan('${loan.id}')">Save Changes</button>
+    </div>
+  </div>`;
+}
+
+function loanModalHTML(trucks){
+  return `<div class="modal-bg" id="loanModal">
+    <div class="modal">
+      <div class="modal-handle"></div>
+      <div class="modal-header"><div class="modal-title">Add Loan</div><button class="modal-close" onclick="closeLoanModal()">✕</button></div>
+      <div class="form-group"><label class="form-label">Truck</label>
+        <select class="form-select" id="ln_truck">
+          ${trucks.map(t=>`<option value="${t.id}">${t.name}</option>`).join("")}
+        </select>
+      </div>
+      <div class="form-group"><label class="form-label">Lender / Bank</label><input class="form-input" id="ln_lender" placeholder="e.g. SBI Bank"/></div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Principal ₹</label><input class="form-input" type="number" id="ln_principal" placeholder="0"/></div>
+        <div class="form-group"><label class="form-label">EMI ₹/mo</label><input class="form-input" type="number" id="ln_emi" placeholder="0"/></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Interest Rate %</label><input class="form-input" type="number" step="0.1" id="ln_rate" placeholder="e.g. 11"/></div>
+        <div class="form-group"><label class="form-label">Start Date</label><input class="form-input" type="date" id="ln_start" value="${today()}"/></div>
+      </div>
+      <div class="form-group"><label class="form-label">Next EMI Date</label><input class="form-input" type="date" id="ln_next" value="${today()}"/></div>
+      <div style="display:flex;gap:8px">
+        <button class="btn btn-ghost btn-sm" onclick="closeLoanModal()">Cancel</button>
+        <button class="btn btn-primary btn-sm" style="flex:1" onclick="addLoan()">Add Loan</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function openLoanModal(){ document.getElementById("loanModal")?.classList.add("open"); }
+function closeLoanModal(){ document.getElementById("loanModal")?.classList.remove("open"); }
+
+async function addLoan(){
+  const lender = val("ln_lender"), principal = num("ln_principal");
+  if(!lender||!principal){ showToast("Lender and principal required","error"); return; }
+  const id = uid();
+  await fbSet(`loans/${id}`, {id, truckId:val("ln_truck"), lender, principal, emi:num("ln_emi"), rate:num("ln_rate"), paid:0, startDate:val("ln_start")||today(), nextDate:val("ln_next")||today()});
+  closeLoanModal(); showToast("Loan added ✓");
+}
+
+async function saveLoan(id){
+  const lender = val("le_lender"), principal = num("le_principal");
+  if(!lender||!principal){ showToast("Lender and principal required","error"); return; }
+  await fbUpdate(`loans/${id}`, {truckId:val("le_truck"), lender, principal, emi:num("le_emi"), rate:num("le_rate"), paid:num("le_paid"), startDate:val("le_start")||today(), nextDate:val("le_next")||today()});
+  loanEditId=null; showToast("Loan updated ✓");
+}
+
+async function delLoan(id){
+  await fbRemove(`loans/${id}`);
+  loanEditId=null; loanDelConfirm=null; showToast("Loan deleted");
+}
+
+async function payLoan(id){
+  const amt = num(`pay_${id}`);
+  if(!amt){ showToast("Enter amount","error"); return; }
+  const loan = state.loans[id];
+  if(!loan) return;
+  const newPaid = Number(loan.paid||0) + amt;
+  await fbUpdate(`loans/${id}`, {paid: newPaid});
+  showToast(`${fmt(amt)} payment recorded ✓`);
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// NET WORTH
+// ═══════════════════════════════════════════════════════════════════
+function renderWorth(){
+  const trucks  = truckList();
+  const active  = trucks.filter(t=>t.status!=="sold");
+  const sold    = trucks.filter(t=>t.status==="sold");
+  const loans   = loanList();
+
+  // ASSETS
+  const fleetValue = active.reduce((a,t)=>a+Number(t.value||0),0);
+
+  // Business cash position, all-time: delivered freight minus all expenses,
+  // plus money realised from selling trucks.
+  const allIncome = tripList().filter(t=>t.status==="Delivered").reduce((a,t)=>a+Number(t.freight||0),0);
+  const allExpense= expList().reduce((a,x)=>a+Number(x.amount||0),0);
+  const saleProceeds = sold.reduce((a,t)=>a+Number(t.salePrice||0),0);
+  const cashPosition = allIncome - allExpense + saleProceeds;
+
+  // LIABILITIES
+  const loanOut = loans.reduce((a,l)=>a+(Number(l.principal)-Number(l.paid)),0);
+
+  const totalAssets = fleetValue + Math.max(0,cashPosition);
+  const netWorth = fleetValue + cashPosition - loanOut;
+
+  // Realised profit/loss from sales (for context)
+  const realisedPL = sold.reduce((a,t)=>a+(Number(t.salePrice||0)-Number(t.purchase||0)),0);
+
+  document.getElementById("tab-worth").innerHTML = `
+    <div class="card">
+      <div class="card-title">Net Worth</div>
+      <div style="text-align:center;padding:8px 0 4px">
+        <div style="font-size:32px;font-weight:800;font-family:'DM Mono',monospace;letter-spacing:-1px;color:${netWorth>=0?"var(--g)":"var(--red)"}">${fmt(netWorth)}</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:4px">Assets minus what you owe</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">What You Own (Assets)</div>
+      <table class="sum-table"><tbody>
+        <tr><td class="key">Trucks at today's value (${active.length})</td><td class="val green">${fmt(fleetValue)}</td></tr>
+        <tr><td class="key">Business cash (earned − spent ${saleProceeds?"+ sales":""})</td><td class="val ${cashPosition>=0?"green":"red"}">${fmt(cashPosition)}</td></tr>
+        <tr><td class="key" style="font-weight:700;color:var(--text)">Total assets</td><td class="val">${fmt(fleetValue+cashPosition)}</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="card">
+      <div class="card-title">What You Owe (Liabilities)</div>
+      <table class="sum-table"><tbody>
+        <tr><td class="key">Loan outstanding (${loans.length})</td><td class="val red">${fmt(loanOut)}</td></tr>
+      </tbody></table>
+    </div>
+
+    ${sold.length?`<div class="card">
+      <div class="card-title">From Selling Trucks</div>
+      <table class="sum-table"><tbody>
+        <tr><td class="key">Trucks sold</td><td class="val">${sold.length}</td></tr>
+        <tr><td class="key">Total received</td><td class="val green">${fmt(saleProceeds)}</td></tr>
+        <tr><td class="key">Profit/loss vs purchase</td><td class="val ${realisedPL>=0?"green":"red"}">${realisedPL>=0?"+":""}${fmt(realisedPL)}</td></tr>
+      </tbody></table>
+    </div>`:""}
+
+    <div class="card" style="background:var(--surface)">
+      <div style="font-size:11px;color:var(--muted);line-height:1.6">
+        💡 Keep each truck's <b>"Worth Now"</b> updated in the Fleet tab so this stays accurate. Business cash assumes profit stays in the business — adjust your thinking if money was taken out.
+      </div>
+    </div>
+  `;
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// SHARED HELPERS
+// ═══════════════════════════════════════════════════════════════════
+function confirmHTML(label, onYes, onNo){
+  return `<div class="confirm-box">
+    <div class="confirm-msg">⚠️ Delete this ${label}? This cannot be undone.</div>
+    <div style="display:flex;gap:8px">
+      <button class="btn btn-ghost btn-xs" onclick="${onNo}">Cancel</button>
+      <button class="btn btn-red btn-xs" onclick="${onYes}">Yes, Delete</button>
+    </div>
+  </div>`;
+}
+
+function val(id){ const el=document.getElementById(id); return el?el.value.trim():""; }
+function num(id){ const v=val(id); return v?Number(v):0; }
+function escH(s){ return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+
+// Close modal on backdrop click
+document.addEventListener("click", e=>{
+  if(e.target.classList.contains("modal-bg")) e.target.classList.remove("open");
+});
+
+// ── SERVICE WORKER (makes it installable + opens offline) ─────────
+// Only register on http/https. On file:// (opening the file directly) the
+// browser blocks service workers, so we skip it entirely. Wrapped in try/catch
+// so it can never stop the app from booting.
+try {
+  if("serviceWorker" in navigator && (location.protocol==="https:" || location.protocol==="http:")){
+    const swCode = `
+      const CACHE="fleetledger-v1";
+      self.addEventListener("install", e=>{ self.skipWaiting(); });
+      self.addEventListener("activate", e=>{ e.waitUntil(self.clients.claim()); });
+      self.addEventListener("fetch", e=>{
+        const req = e.request;
+        // Network-first for Firebase (live data); cache-first fallback for the page shell.
+        if(req.url.includes("firebaseio.com") || req.url.includes("googleapis.com")){ return; }
+        e.respondWith(
+          fetch(req).then(res=>{
+            const copy = res.clone();
+            caches.open(CACHE).then(c=>c.put(req, copy)).catch(()=>{});
+            return res;
+          }).catch(()=> caches.match(req).then(r=> r || caches.match("./")))
+        );
+      });
+    `;
+    const blob = new Blob([swCode], {type:"application/javascript"});
+    navigator.serviceWorker.register(URL.createObjectURL(blob)).catch(()=>{});
+  }
+} catch(e){ /* ignore — never block boot */ }
+
+// ── BOOT ─────────────────────────────────────────────────────────
+bootstrap().catch(err=>{
+  document.getElementById("loading").innerHTML = `
+    <div style="padding:32px;text-align:center;color:var(--red)">
+      <div style="font-size:32px;margin-bottom:12px">⚠️</div>
+      <div style="font-size:14px;font-weight:600">Firebase connection failed</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:6px">${err.message}</div>
+    </div>`;
+});
+</script>
+
+</body>
+</html>
